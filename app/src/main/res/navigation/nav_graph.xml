@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.hackathonapp.MainActivity"
+        android:label="main_activity"
+        tools:layout="@layout/main_activity" />
+    <activity
+        android:id="@+id/page2"
+        android:name="com.hackathonapp.Page2"
+        android:label="page2_activity"
+        tools:layout="@layout/page2_activity" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.hackathonapp.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_page2"
+            app:destination="@id/page2" />
+    </fragment>
+</navigation>
